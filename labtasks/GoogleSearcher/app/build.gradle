@@ -5,7 +5,7 @@ android {
     buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "ro.pub.cs.systems.eim.lab07.googlesearcher"
-        minSdkVersion 16
+        minSdkVersion 'API 16'
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -16,10 +16,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.2.0'
-    compile group: 'cz.msebera.android' , name: 'httpclient', version: '4.4.1.1'
+    compile 'cz.msebera.android:httpclient:4.4.1.1'
 }
